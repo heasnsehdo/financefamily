@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FinanceFamily - Kelola Keuangan Keluarga Anda</title>
+    <meta name="description" content="Aplikasi manajemen keuangan keluarga yang membantu Anda mengelola pemasukan, pengeluaran, anggaran, dan tujuan keuangan dengan mudah">
+    <meta name="keywords" content="keuangan keluarga, manajemen keuangan, anggaran, pemasukan, pengeluaran">
+    <meta property="og:title" content="FinanceFamily - Kelola Keuangan Keluarga Anda">
+    <meta property="og:description" content="Aplikasi manajemen keuangan keluarga yang membantu Anda mengelola pemasukan, pengeluaran, anggaran, dan tujuan keuangan dengan mudah">
+    <meta name="twitter:title" content="FinanceFamily - Kelola Keuangan Keluarga Anda">
+    <meta name="twitter:description" content="Aplikasi manajemen keuangan keluarga yang membantu Anda mengelola pemasukan, pengeluaran, anggaran, dan tujuan keuangan dengan mudah">
+
+    <script src="https://resource.trickle.so/vendor_lib/unpkg/react@18/umd/react.production.min.js"></script>
+    <script src="https://resource.trickle.so/vendor_lib/unpkg/react-dom@18/umd/react-dom.production.min.js"></script>
+    <script src="https://resource.trickle.so/vendor_lib/unpkg/@babel/standalone/babel.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://resource.trickle.so/vendor_lib/unpkg/lucide-static@0.516.0/font/lucide.css" rel="stylesheet">
+
+    <style type="text/tailwindcss">
+    @layer theme {
+        :root {
+            --primary-color: #10b981;
+            --secondary-color: #059669;
+            --accent-color: #34d399;
+            --background: #ffffff;
+            --surface: #f9fafb;
+            --text-primary: #111827;
+            --text-secondary: #6b7280;
+            --border-color: #e5e7eb;
+        }
+    }
+
+    @layer base {
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            color: var(--text-primary);
+            background-color: var(--background);
+        }
+    }
+
+    @layer components {
+        .btn-primary {
+            @apply px-6 py-3 bg-gradient-to-r from-[var(--primary-color)] to-[var(--secondary-color)] text-white rounded-lg font-semibold hover:shadow-lg hover:scale-105 transition-all duration-300;
+        }
+        .btn-secondary {
+            @apply px-6 py-3 bg-white text-[var(--primary-color)] border-2 border-[var(--primary-color)] rounded-lg font-semibold hover:bg-gradient-to-r hover:from-[var(--primary-color)] hover:to-[var(--secondary-color)] hover:text-white hover:shadow-lg transition-all duration-300;
+        }
+        .card-hover {
+            @apply transition-all duration-300 hover:shadow-2xl hover:-translate-y-2;
+        }
+        .gradient-bg {
+            @apply bg-gradient-to-br from-green-50 via-emerald-50 to-teal-50;
+        }
+    }
+    </style>
+</head>
+<body>
+    <div id="root"></div>
+    <script type="text/babel" src="components/Header.js"></script>
+    <script type="text/babel" src="components/Hero.js"></script>
+    <script type="text/babel" src="components/Features.js"></script>
+    <script type="text/babel" src="components/Pricing.js"></script>
+    <script type="text/babel" src="components/Footer.js"></script>
+    <script type="text/babel" src="app.js"></script>
+</body>
+</html>
